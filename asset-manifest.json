@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/static/js/main.9ff7a409.chunk.js",
-    "main.js.map": "/static/js/main.9ff7a409.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.da61b8b4.js",
-    "runtime-main.js.map": "/static/js/runtime-main.da61b8b4.js.map",
-    "static/js/2.c012517b.chunk.js": "/static/js/2.c012517b.chunk.js",
-    "static/js/2.c012517b.chunk.js.map": "/static/js/2.c012517b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.aad5c3c2c3f15d833b24b5c60e259f99.js": "/precache-manifest.aad5c3c2c3f15d833b24b5c60e259f99.js",
-    "service-worker.js": "/service-worker.js",
-    "static/js/2.c012517b.chunk.js.LICENSE.txt": "/static/js/2.c012517b.chunk.js.LICENSE.txt"
+    "main.js": "/maple-clicker/static/js/main.9ff7a409.chunk.js",
+    "main.js.map": "/maple-clicker/static/js/main.9ff7a409.chunk.js.map",
+    "runtime-main.js": "/maple-clicker/static/js/runtime-main.5d779122.js",
+    "runtime-main.js.map": "/maple-clicker/static/js/runtime-main.5d779122.js.map",
+    "static/js/2.c012517b.chunk.js": "/maple-clicker/static/js/2.c012517b.chunk.js",
+    "static/js/2.c012517b.chunk.js.map": "/maple-clicker/static/js/2.c012517b.chunk.js.map",
+    "index.html": "/maple-clicker/index.html",
+    "precache-manifest.f40ca550dd9934bb0846b6836a051bca.js": "/maple-clicker/precache-manifest.f40ca550dd9934bb0846b6836a051bca.js",
+    "service-worker.js": "/maple-clicker/service-worker.js",
+    "static/js/2.c012517b.chunk.js.LICENSE.txt": "/maple-clicker/static/js/2.c012517b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.da61b8b4.js",
+    "static/js/runtime-main.5d779122.js",
     "static/js/2.c012517b.chunk.js",
     "static/js/main.9ff7a409.chunk.js"
   ]
