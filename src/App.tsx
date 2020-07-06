@@ -1,15 +1,12 @@
+import "bootstrap/dist/css/bootstrap.css";
 import React, { Component } from "react";
+import { Main } from "./Game/Main";
 
 class App extends Component {
-
-  constructor(props: {}) {
-    super(props);
-  }
-
   public render() {
     return (
       <React.Fragment>
-        <div>yep</div>
+        <Main />
       </React.Fragment>
     );
   }

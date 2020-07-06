@@ -1,5 +1,5 @@
 {
-  "homepage": "http://jozhus.github.io/maple-clicker",
+  "homepage": "https://jozhus.github.io/maple-clicker",
   "name": "maple-clicker",
   "version": "0.1.0",
   "private": true,
@@ -9,6 +9,7 @@
     "preprebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "prebuild": "tsc --pretty",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -28,6 +29,7 @@
     "bootstrap": "^4.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-draggable": "^4.4.3",
     "react-scripts": "3.4.1",
     "reactstrap": "^8.5.1",
     "uuid": "^8.2.0"

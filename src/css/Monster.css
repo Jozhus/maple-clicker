@@ -1,0 +1,15 @@
+.Monster {
+    position: absolute;
+    right: 50%;
+    top: 50%;
+}
+
+.Monster > .info {
+    font-size: 20px;
+    text-align: center;
+}
+
+.Monster > .image {
+    height: 100%;
+    align-content: center;
+}
