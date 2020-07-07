@@ -11,9 +11,11 @@ class Main extends Component<{}, IMainState> {
         this.state = {
             statWindowOpen: false,
             charInfo: {
-                username: "Jozhus",
-                class: "Kinesis",
-                level: 253,
+                basicInfo: {
+                    username: "Jozhus",
+                    class: "Kinesis",
+                    level: 253
+                },
                 stats: {
                     str: 4,
                     dex: 4,

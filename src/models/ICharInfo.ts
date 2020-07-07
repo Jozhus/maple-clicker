@@ -1,7 +1,9 @@
 interface ICharInfo {
-    username: string;
-    class: string;
-    level: number;
+    basicInfo: {
+        username: string;
+        class: string;
+        level: number;
+    }
     stats: {
         str: number;
         dex: number;
