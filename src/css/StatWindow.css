@@ -2,8 +2,15 @@
     width: 300px;
     height: 500px;
     background-color: white;
+    border: solid black;
     border-radius: 8px;
     z-index: 1000;
+}
+
+.handle {
+    color: gold;
+    text-align: center;
+    background: black;
 }
 
 .infoBox {
@@ -11,15 +18,31 @@
 }
 
 .infoRow {
+    padding: 2px 12px 0px 14px;
     padding-top: 2px;
     border-radius: 8px;
-    width: 90%;
-    align-content: center;
 }
 
 .fieldCol {
+    width: 33%;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    background-color: limegreen;
+    -webkit-text-stroke: 0.75px black;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(0deg, rgba(136,187,0,1) 12%, rgba(153,221,0,1) 35%, rgba(221,255,0,1) 89%);
     text-indent: 10px;
+    border-left: solid grey;
+    border-top: solid grey;
+    border-bottom: solid grey;
+    border-width: 1px;
+}
+
+.valueCol {
+    width: 66%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    text-indent: 10px;
+    border: solid grey;
+    border-width: 1px;
 }

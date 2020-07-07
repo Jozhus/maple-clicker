@@ -12,7 +12,7 @@ class Main extends Component<{}, IMainState> {
             statWindowOpen: false,
             charInfo: {
                 basicInfo: {
-                    username: "Jozhus",
+                    name: "MagicBully",
                     class: "Kinesis",
                     level: 253
                 },
@@ -23,7 +23,7 @@ class Main extends Component<{}, IMainState> {
                     luk: 4
                 },
                 detailed: {
-                    damage: "10000-10000"
+                    damage: "10000 ~ 10000"
                 }
             }
         };

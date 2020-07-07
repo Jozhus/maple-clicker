@@ -1,6 +1,6 @@
 interface ICharInfo {
     basicInfo: {
-        username: string;
+        name: string;
         class: string;
         level: number;
     }
