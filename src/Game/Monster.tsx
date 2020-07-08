@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { IMonsterProps } from "../models/IMonsterProps";
-import { IMonsterState } from "../models/IMonsterState";
-import { ILoot } from "../models/ILoot";
-import { monsterList, dropTable } from "../constants/ExportedConstants";
+import { IMonsterProps } from "./models/IMonsterProps";
+import { IMonsterState } from "./models/IMonsterState";
+import { ILoot } from "./models/ILoot";
+import { dropTable } from "./constants/ExportedConstants";
 import "../css/Monster.css";
 
 class Monster extends Component<IMonsterProps, IMonsterState> {
@@ -28,7 +28,7 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
     }
 
     private summonRandomMonster(): void {
-        this.setState({ ...monsterList[this.props.location][Math.floor(Math.random() * monsterList[this.props.location].length)] });
+        this.setState({ ...this.props.monsterList[Math.floor(Math.random() * this.props.monsterList.length)] });
     }
 
     private takeDamage(): void {
@@ -46,9 +46,9 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
     private die(): void {
         this.state.loot.forEach((type: string) => {
             dropTable[type].forEach((item: ILoot) => {
-                console.log(item.name);
+                this.props.dropLoot({ ...item }); // Account for drop chance later.
             });
-        }); // Drop random selection from loot table.
+        });
         this.summonRandomMonster();
     }
 

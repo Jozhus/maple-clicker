@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Button } from "reactstrap";
 import { StatWindow } from "./StatWindow";
-import { Monster } from "./Monster";
-import { IMainState } from "../models/IMainState";
-import "../css/General.css";
+import { Battlefield } from "./Battlefield";
+import { IMainState } from "./models/IMainState";
+import { ICharInfo } from "./models/ICharInfo";
 
 class Main extends Component<{}, IMainState> {
     constructor(props: {}) {
@@ -44,17 +44,17 @@ class Main extends Component<{}, IMainState> {
 
     private takeDamage(damage: number): void {
         // Damage calculations
-        const prevStruct: IMainState = { ...this.state };
-        let newHp: number = prevStruct.charInfo.basicInfo.hpCurr - damage;
+        const prevCharInfo: ICharInfo = { ...this.state.charInfo };
+        let newHp: number = prevCharInfo.basicInfo.hpCurr - damage;
 
         if (newHp <= 0) {
             newHp = 0;
             this.die();
         }
 
-        prevStruct.charInfo.basicInfo.hpCurr = newHp;
+        prevCharInfo.basicInfo.hpCurr = newHp;
 
-        this.setState({ ...prevStruct });
+        this.setState({ charInfo: prevCharInfo });
     }
 
     private die(): void {
@@ -75,11 +75,10 @@ class Main extends Component<{}, IMainState> {
                         charInfo={this.state.charInfo}
                     /> : null
                 }
-                <Monster
-                    location={"Henesys"}
-                    dropLoot={() => { }}
-                    getPlayerDamage={this.calculateDamage}
+                <Battlefield
+                    location="Henesys"
                     damagePlayer={this.takeDamage}
+                    getPlayerDamage={this.calculateDamage}
                 />
             </React.Fragment>
         );

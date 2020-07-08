@@ -18,3 +18,17 @@ img {
 * {
   cursor: url("../cursors/hand.ico"), auto;
 }
+
+body {
+  background-image: url("https://i.ytimg.com/vi/ddd2MInZXUU/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}

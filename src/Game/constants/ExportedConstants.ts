@@ -83,6 +83,7 @@ const dropTable: IDropTable = {
         {
             name: "meso",
             chance: 0.5,
+            stackable: true,
             amount: 100
         }
     ]

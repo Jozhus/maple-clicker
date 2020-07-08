@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Draggable from "react-draggable";
-import { IStatWindowProps } from "../models/IStatWindowProps";
+import { IStatWindowProps } from "./models/IStatWindowProps";
 import { Row } from "reactstrap";
 import { v4 as uuid } from "uuid";
 import "../css/StatWindow.css";

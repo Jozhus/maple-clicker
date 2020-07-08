@@ -1,8 +1,8 @@
-.Monster {
+.ground {
     position: inherit;
     padding-top: 30px;
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 200px;
     background-color: white;
     border: solid black;
     border-radius: 8px;
@@ -10,13 +10,7 @@
     margin-top: 10%;
 }
 
-.info {
+.title {
     font-size: 20px;
     text-align: center;
-}
-
-.image {
-    display: block;
-    margin: auto;
-    width: 50%
 }
