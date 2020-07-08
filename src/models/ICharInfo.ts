@@ -3,6 +3,10 @@ interface ICharInfo {
         name: string;
         class: string;
         level: number;
+        hpMax: number;
+        mpMax: number;
+        hpCurr: number;
+        mpCurr: number;
     }
     stats: {
         str: number;

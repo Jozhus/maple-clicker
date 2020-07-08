@@ -11,6 +11,7 @@
     color: gold;
     text-align: center;
     background: black;
+    font-size: 0.75rem;
 }
 
 .infoBox {
@@ -35,7 +36,7 @@
     border-left: solid grey;
     border-top: solid grey;
     border-bottom: solid grey;
-    border-width: 1px;
+    border-width: 1px 1px 1px 1px !important;
 }
 
 .valueCol {

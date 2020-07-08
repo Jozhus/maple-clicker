@@ -3,11 +3,9 @@ import React, { Component } from "react";
 import { Main } from "./Game/Main";
 
 class App extends Component {
-  public render() {
+  public render(): JSX.Element {
     return (
-      <React.Fragment>
-        <Main />
-      </React.Fragment>
+      <Main />
     );
   }
 }
