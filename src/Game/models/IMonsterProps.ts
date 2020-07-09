@@ -1,9 +1,8 @@
 import { IMonsterInfo } from "./IMonsterInfo";
-import { IDropProps } from "./IDropProps";
 
 interface IMonsterProps {
     monsterList: IMonsterInfo[];
-    dropLoot: (loot: IDropProps) => void;
+    dropLoot: (itemName: string, amount: number) => void;
     getPlayerDamage: () => number;
     damagePlayer: (damage: number) => void;
 };

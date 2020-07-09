@@ -59,7 +59,6 @@ class Main extends Component<{}, IMainState> {
 
     private die(): void {
         console.log("You died");
-
     }
 
     public render(): JSX.Element {

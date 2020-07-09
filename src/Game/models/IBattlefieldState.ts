@@ -1,7 +1,7 @@
-import { IDropProps } from "./IDropProps";
+import { IItemProps } from "./IItemProps";
 
 interface IBattlefieldState {
-    groundLoot: IDropProps[]
+    groundLoot: IItemProps[]
 };
 
 export type { IBattlefieldState };

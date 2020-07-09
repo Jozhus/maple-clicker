@@ -1,7 +1,7 @@
 import { IMonsterInfo } from "./IMonsterInfo";
 
-interface IMonsterList {
+interface IMonsterTable {
     [location: string]: IMonsterInfo[]
 };
 
-export type { IMonsterList };
+export type { IMonsterTable };

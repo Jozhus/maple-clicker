@@ -46,7 +46,7 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
     private die(): void {
         this.state.loot.forEach((type: string) => {
             dropTable[type].forEach((item: IDropProps) => {
-                this.props.dropLoot({ ...item }); // Account for drop chance later.
+                this.props.dropLoot(item.name, item.maxAmount); // Account for drop chance later.
             });
         });
         this.summonRandomMonster();

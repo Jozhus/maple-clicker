@@ -1,8 +1,8 @@
 interface IDropProps {
     name: string;
     chance: number;
-    stackable: boolean;
-    amount: number;
+    minAmount: number;
+    maxAmount: number;
 };
 
 export type { IDropProps };

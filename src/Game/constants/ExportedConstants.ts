@@ -1,7 +1,8 @@
-import { IMonsterList } from "../models/IMonsterList";
+import { IMonsterTable } from "../models/IMonsterTable";
 import { IDropTable } from "../models/IDropTable";
+import { IItemList } from "../models/IItemList";
 
-const monsterList: IMonsterList = {
+const monsterTable: IMonsterTable = {
     "Lith Harbor": [
         {
             name: "Snail",
@@ -29,7 +30,8 @@ const monsterList: IMonsterList = {
             pdr: 0.1,
             attack: 10,
             loot: [
-                "common"
+                "common",
+                "low_level_gear"
             ],
             image: "https://vignette.wikia.nocookie.net/maplestory/images/0/02/Mob_Orange_Mushroom.png"
         },
@@ -83,10 +85,57 @@ const dropTable: IDropTable = {
         {
             name: "meso",
             chance: 0.5,
-            stackable: true,
-            amount: 100
+            minAmount: 50,
+            maxAmount: 100
         }
+    ],
+    "low_level_gear": [
+        {
+            name: "wooden_buckler",
+            chance: 0.1,
+            minAmount: 1,
+            maxAmount: 1
+        },
+        {
+            name: "blue_cloth_pants",
+            chance: 0.1,
+            minAmount: 1,
+            maxAmount: 1
+        },
+        {
+            name: "green_ghetto_beanie",
+            chance: 0.1,
+            minAmount: 1,
+            maxAmount: 1
+        },
     ]
 };
 
-export { monsterList, dropTable };
+const itemList: IItemList = {
+    "meso": {
+        itemName: "Meso",
+        stackable: true,
+        type: "other",
+        amount: 0
+    },
+    "wooden_buckler": {
+        itemName: "Wooden Buckler",
+        stackable: false,
+        type: "equipment",
+        amount: 0
+    },
+    "blue_cloth_pants": {
+        itemName: "Blue Cloth Pants",
+        stackable: false,
+        type: "equipment",
+        amount: 0
+    },
+    "green_ghetto_beanie": {
+        itemName: "Green Ghetto Beanie",
+        stackable: false,
+        type: "equipment",
+        amount: 0
+    }
+};
+
+export { monsterTable, dropTable, itemList };

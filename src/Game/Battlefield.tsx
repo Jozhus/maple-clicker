@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { monsterList } from "./constants/ExportedConstants";
+import { monsterTable } from "./constants/ExportedConstants";
 import { Monster } from "./Monster";
 import { IBattlefieldProps } from "./models/IBattlefieldProps";
 import { IBattlefieldState } from "./models/IBattlefieldState";
-import { IDropProps } from "./models/IDropProps";
+import { IItemProps } from "./models/IItemProps";
 import "../css/Battlefield.css";
+import { generateItem } from "./helpers/generateItem";
 
 class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
     constructor(props: IBattlefieldProps) {
@@ -17,18 +18,24 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
         this.dropLoot = this.dropLoot.bind(this);
     }
 
-    private dropLoot(item: IDropProps): void {
-        let prevGroundLoot: IDropProps[] = this.state.groundLoot;
+    private dropLoot(itemName: string, amount: number): void {
+        let item: IItemProps;
+        try {
+            item = generateItem(itemName, amount);
+        } catch (err) {
+            console.error(err);
+            return;
+        }
+        let prevGroundLoot: IItemProps[] = this.state.groundLoot;
 
-        if (prevGroundLoot.length && item.stackable) {
-            prevGroundLoot.some((groundLoot: IDropProps, index: number) => {
-                if (item.name === groundLoot.name) {
-                    groundLoot.amount += item.amount;
-                }
+        if (prevGroundLoot.every((groundItem: IItemProps) => {
+            if (item.stackable && groundItem.itemName === item.itemName) {
+                groundItem.amount += item.amount;
+                return false;
+            }
 
-                return item.name === groundLoot.name;
-            });
-        } else {
+            return true;
+        })) {
             prevGroundLoot.push(item);
         }
 
@@ -39,7 +46,7 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
         return (
             <React.Fragment>
                 <Monster
-                    monsterList={monsterList[this.props.location]}
+                    monsterList={monsterTable[this.props.location]}
                     dropLoot={this.dropLoot}
                     getPlayerDamage={this.props.getPlayerDamage}
                     damagePlayer={this.props.damagePlayer}
