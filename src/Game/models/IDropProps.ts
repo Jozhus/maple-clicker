@@ -1,8 +1,8 @@
-interface ILoot {
+interface IDropProps {
     name: string;
     chance: number;
     stackable: boolean;
     amount: number;
 };
 
-export type { ILoot };
+export type { IDropProps };

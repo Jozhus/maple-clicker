@@ -1,7 +1,7 @@
-import { ILoot } from "./ILoot";
+import { IDropProps } from "./IDropProps";
 
 interface IDropTable {
-    [type: string]: ILoot[]
+    [type: string]: IDropProps[]
 };
 
 export type { IDropTable };

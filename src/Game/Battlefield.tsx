@@ -3,7 +3,7 @@ import { monsterList } from "./constants/ExportedConstants";
 import { Monster } from "./Monster";
 import { IBattlefieldProps } from "./models/IBattlefieldProps";
 import { IBattlefieldState } from "./models/IBattlefieldState";
-import { ILoot } from "./models/ILoot";
+import { IDropProps } from "./models/IDropProps";
 import "../css/Battlefield.css";
 
 class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
@@ -17,11 +17,11 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
         this.dropLoot = this.dropLoot.bind(this);
     }
 
-    private dropLoot(item: ILoot): void {
-        let prevGroundLoot: ILoot[] = this.state.groundLoot;
+    private dropLoot(item: IDropProps): void {
+        let prevGroundLoot: IDropProps[] = this.state.groundLoot;
 
         if (prevGroundLoot.length && item.stackable) {
-            prevGroundLoot.some((groundLoot: ILoot, index: number) => {
+            prevGroundLoot.some((groundLoot: IDropProps, index: number) => {
                 if (item.name === groundLoot.name) {
                     groundLoot.amount += item.amount;
                 }

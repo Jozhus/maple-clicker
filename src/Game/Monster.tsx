@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { IMonsterProps } from "./models/IMonsterProps";
 import { IMonsterState } from "./models/IMonsterState";
-import { ILoot } from "./models/ILoot";
+import { IDropProps } from "./models/IDropProps";
 import { dropTable } from "./constants/ExportedConstants";
 import "../css/Monster.css";
 
@@ -45,7 +45,7 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
 
     private die(): void {
         this.state.loot.forEach((type: string) => {
-            dropTable[type].forEach((item: ILoot) => {
+            dropTable[type].forEach((item: IDropProps) => {
                 this.props.dropLoot({ ...item }); // Account for drop chance later.
             });
         });

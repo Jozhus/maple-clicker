@@ -1,7 +1,7 @@
-import { ILoot } from "./ILoot";
+import { IDropProps } from "./IDropProps";
 
 interface IBattlefieldState {
-    groundLoot: ILoot[]
+    groundLoot: IDropProps[]
 };
 
 export type { IBattlefieldState };
