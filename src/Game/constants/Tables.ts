@@ -45,7 +45,8 @@ const monsterTable: IMonsterTable = {
             pdr: 0.05,
             attack: 47,
             loot: [
-                "common"
+                "common",
+                "low_level_gear"
             ],
             image: "https://vignette.wikia.nocookie.net/maplestory/images/9/92/Mob_Green_Mushroom.png"
         },
@@ -59,7 +60,8 @@ const monsterTable: IMonsterTable = {
             pdr: 0.1,
             attack: 51,
             loot: [
-                "common"
+                "common",
+                "low_level_gear"
             ],
             image: "https://vignette.wikia.nocookie.net/maplestory/images/3/3c/Mob_Horny_Mushroom.png"
         },
@@ -73,7 +75,9 @@ const monsterTable: IMonsterTable = {
             pdr: 0.1,
             attack: 58,
             loot: [
-                "common"
+                "common",
+                "low_level_gear",
+                "lol"
             ],
             image: "https://vignette.wikia.nocookie.net/maplestory/images/a/ad/Mob_Blue_Mushroom.png"
         }
@@ -87,6 +91,12 @@ const dropTable: IDropTable = {
             chance: 0.5,
             minAmount: 50,
             maxAmount: 100
+        },
+        {
+            name: "red_potion",
+            chance: 0.3,
+            minAmount: 1,
+            maxAmount: 5
         }
     ],
     "low_level_gear": [
@@ -108,6 +118,14 @@ const dropTable: IDropTable = {
             minAmount: 1,
             maxAmount: 1
         },
+    ],
+    "lol": [
+        {
+            name: "arcane_claw",
+            chance: 0.5,
+            minAmount: 1,
+            maxAmount: 1
+        }
     ]
 };
 
@@ -116,25 +134,78 @@ const itemList: IItemList = {
         itemName: "Meso",
         stackable: true,
         type: "other",
-        amount: 0
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/cxzcxzcedfeqwfdew/images/0/0e/Meso_Coin.png",
+        sellPrice: 1
+    },
+    "red_potion": {
+        itemName: "Red Potion",
+        stackable: true,
+        type: "consumable",
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/maplestory/images/c/cf/Use_Red_Potion.png",
+        sellPrice: 3
     },
     "wooden_buckler": {
         itemName: "Wooden Buckler",
         stackable: false,
         type: "equipment",
-        amount: 0
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/maplestory/images/5/58/Eqp_Wooden_Buckler.png",
+        sellPrice: 400,
+        levelReq: 10,
+        slots: 7,
+        stars: 0,
+        potentialTier: "none",
+        baseStats: {
+            defence: 10
+        }
     },
     "blue_cloth_pants": {
         itemName: "Blue Cloth Pants",
         stackable: false,
         type: "equipment",
-        amount: 0
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/maplestory/images/6/66/Eqp_Blue_Cloth_Pants_%28Male%29.png",
+        sellPrice: 300,
+        levelReq: 10,
+        slots: 7,
+        stars: 0,
+        baseStats: {
+            defence: 9
+        }
     },
     "green_ghetto_beanie": {
         itemName: "Green Ghetto Beanie",
         stackable: false,
         type: "equipment",
-        amount: 0
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/maplestory/images/b/b9/Eqp_Green_Ghetto_Beanie.png",
+        sellPrice: 100,
+        levelReq: 10,
+        slots: 7,
+        stars: 0,
+        baseStats: {
+            defence: 9
+        }
+    },
+    "arcane_claw": {
+        itemName: "Arcane Umbra Guards",
+        stackable: false,
+        type: "equipment",
+        amount: 0,
+        image: "https://vignette.wikia.nocookie.net/maplestory/images/6/67/Eqp_Arcane_Umbra_Guards.png",
+        sellPrice: 1,
+        levelReq: 200,
+        slots: 8,
+        stars: 0,
+        baseStats: {
+            dex: 100,
+            luk: 100,
+            attk: 149,
+            bossDamage: 0.3,
+            ied: 0.2
+        }
     }
 };
 

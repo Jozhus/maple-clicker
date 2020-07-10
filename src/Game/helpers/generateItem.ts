@@ -1,5 +1,5 @@
 import { IItemProps } from "../models/IItemProps";
-import { itemList } from "../constants/ExportedConstants";
+import { itemList } from "../constants/Tables";
 
 function generateItem(itemName: string, amount: number): IItemProps {
     if (!(itemName in itemList)) {
@@ -14,6 +14,6 @@ function generateItem(itemName: string, amount: number): IItemProps {
         ...itemList[itemName],
         amount
     });
-};
+}
 
 export { generateItem };

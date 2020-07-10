@@ -67,6 +67,6 @@ class StatWindow extends Component<IStatWindowProps, {}> {
             </Draggable>
         );
     }
-}
+};
 
 export { StatWindow };

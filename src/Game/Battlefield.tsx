@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import { monsterTable } from "./constants/ExportedConstants";
+import { monsterTable } from "./constants/Tables";
 import { Monster } from "./Monster";
 import { IBattlefieldProps } from "./models/IBattlefieldProps";
 import { IBattlefieldState } from "./models/IBattlefieldState";
 import { IItemProps } from "./models/IItemProps";
-import "../css/Battlefield.css";
 import { generateItem } from "./helpers/generateItem";
+import { ItemSlot } from "./ItemSlot";
+import { v4 as uuid } from "uuid";
+import "../css/Battlefield.css";
 
 class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
     constructor(props: IBattlefieldProps) {
@@ -20,12 +22,14 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
 
     private dropLoot(itemName: string, amount: number): void {
         let item: IItemProps;
+
         try {
             item = generateItem(itemName, amount);
         } catch (err) {
             console.error(err);
             return;
         }
+
         let prevGroundLoot: IItemProps[] = this.state.groundLoot;
 
         if (prevGroundLoot.every((groundItem: IItemProps) => {
@@ -51,13 +55,15 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
                     getPlayerDamage={this.props.getPlayerDamage}
                     damagePlayer={this.props.damagePlayer}
                 />
-                <div className="ground">
+                <div className="ground noselect">
                     <div className="title">
                         {this.props.location}
                     </div>
-                    <div>
-                        {JSON.stringify(this.state.groundLoot, null, 3)}
-                    </div>
+                    {
+                        this.state.groundLoot.map((item: IItemProps) => {
+                            return <ItemSlot key={uuid()} item={item} />;
+                        })
+                    }
                 </div>
             </React.Fragment>
         );

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { IMonsterProps } from "./models/IMonsterProps";
 import { IMonsterState } from "./models/IMonsterState";
 import { IDropProps } from "./models/IDropProps";
-import { dropTable } from "./constants/ExportedConstants";
+import { dropTable } from "./constants/Tables";
+import { chance } from "./constants/Chance";
 import "../css/Monster.css";
 
 class Monster extends Component<IMonsterProps, IMonsterState> {
@@ -46,7 +47,9 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
     private die(): void {
         this.state.loot.forEach((type: string) => {
             dropTable[type].forEach((item: IDropProps) => {
-                this.props.dropLoot(item.name, item.maxAmount); // Account for drop chance later.
+                if (chance.weighted([true, false], [item.chance, 1 - item.chance])) {
+                    this.props.dropLoot(item.name, chance.integer({ min: item.minAmount, max: item.maxAmount }));
+                }
             });
         });
         this.summonRandomMonster();
@@ -65,6 +68,7 @@ class Monster extends Component<IMonsterProps, IMonsterState> {
                 <img
                     className="image"
                     src={this.state.image}
+                    alt={this.state.name}
                 />
                 <div className="info">
                     {this.state.name}
