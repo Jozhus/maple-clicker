@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6be01b77a769241c61d5325ae58603b4",
+    "revision": "54626a6fc01bacb03e25d09d60fe47a2",
     "url": "/maple-clicker/index.html"
   },
   {
-    "revision": "b7707b77726bc63ed360",
+    "revision": "e7cb97c5745dde69de1a",
     "url": "/maple-clicker/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "b527c4e5d68e0579ef3d",
-    "url": "/maple-clicker/static/css/main.64054806.chunk.css"
+    "revision": "6db213b6efe5474b6f27",
+    "url": "/maple-clicker/static/css/main.61446f42.chunk.css"
   },
   {
-    "revision": "b7707b77726bc63ed360",
-    "url": "/maple-clicker/static/js/2.eacfd9de.chunk.js"
+    "revision": "e7cb97c5745dde69de1a",
+    "url": "/maple-clicker/static/js/2.0a409c36.chunk.js"
   },
   {
     "revision": "5e819de06af026d7499024f710cfdda3",
-    "url": "/maple-clicker/static/js/2.eacfd9de.chunk.js.LICENSE.txt"
+    "url": "/maple-clicker/static/js/2.0a409c36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b527c4e5d68e0579ef3d",
-    "url": "/maple-clicker/static/js/main.7ed05357.chunk.js"
+    "revision": "6db213b6efe5474b6f27",
+    "url": "/maple-clicker/static/js/main.d478bff9.chunk.js"
   },
   {
     "revision": "b5d3c459bbcde5fceec6",
