@@ -1,0 +1,109 @@
+{
+    "meso": {
+        "itemName": "Meso",
+        "stackable": true,
+        "type": "other",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/cxzcxzcedfeqwfdew/images/0/0e/Meso_Coin.png",
+        "sellPrice": 1
+    },
+    "red_potion": {
+        "itemName": "Red Potion",
+        "stackable": true,
+        "type": "consumable",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/c/cf/Use_Red_Potion.png",
+        "sellPrice": 3
+    },
+    "wooden_buckler": {
+        "itemName": "Wooden Buckler",
+        "stackable": false,
+        "type": "equipment",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/5/58/Eqp_Wooden_Buckler.png",
+        "sellPrice": 400,
+        "levelReq": 10,
+        "slots": 7,
+        "stars": 0,
+        "maxStars": 5,
+        "potentialTier": "none",
+        "baseStats": {
+            "defence": 10
+        }
+    },
+    "blue_cloth_pants": {
+        "itemName": "Blue Cloth Pants",
+        "stackable": false,
+        "type": "equipment",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/6/66/Eqp_Blue_Cloth_Pants_%28Male%29.png",
+        "sellPrice": 300,
+        "levelReq": 10,
+        "slots": 7,
+        "stars": 0,
+        "maxStars": 5,
+        "baseStats": {
+            "defence": 9
+        }
+    },
+    "green_ghetto_beanie": {
+        "itemName": "Green Ghetto Beanie",
+        "stackable": false,
+        "type": "equipment",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/b/b9/Eqp_Green_Ghetto_Beanie.png",
+        "sellPrice": 100,
+        "levelReq": 10,
+        "slots": 7,
+        "stars": 0,
+        "maxStars": 5,
+        "baseStats": {
+            "defence": 9
+        }
+    },
+    "arcane_claw": {
+        "itemName": "Arcane Umbra Guards",
+        "stackable": false,
+        "type": "equipment",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/6/67/Eqp_Arcane_Umbra_Guards.png",
+        "sellPrice": 1,
+        "levelReq": 200,
+        "slots": 8,
+        "stars": 17,
+        "maxStars": 25,
+        "baseStats": {
+            "dex": 100,
+            "luk": 100,
+            "attk": 149,
+            "bossDamage": 0.3,
+            "ied": 0.2
+        },
+        "starBonuses": {
+            "dex": 70,
+            "luk": 70,
+            "maxHp": 255,
+            "maxMp": 255,
+            "attk": 87
+        }
+    },
+    "genesis_psy-limiter": {
+        "itemName": "Sealed Genesis Psy-limiter",
+        "stackable": false,
+        "type": "equipment",
+        "amount": 0,
+        "image": "https://vignette.wikia.nocookie.net/maplestory/images/9/95/Eqp_Genesis_Psy-limiter.png",
+        "sellPrice": 1,
+        "levelReq": 200,
+        "slots": 8,
+        "stars": 0,
+        "maxStars": 25,
+        "baseStats": {
+            "int": 150,
+            "luk": 150,
+            "mattk": 237,
+            "bossDamage": 0.3,
+            "ied": 0.2
+        }
+    }
+}

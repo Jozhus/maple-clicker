@@ -1,19 +1,19 @@
 interface ICharInfo {
+    currHp: number;
+    currMp: number;
     basicInfo: {
         name: string;
         class: string;
         level: number;
-        hpMax: number;
-        mpMax: number;
-        hpCurr: number;
-        mpCurr: number;
-    }
+        maxHp: number;
+        maxMp: number;
+    };
     stats: {
         str: number;
         dex: number;
         int: number;
         luk: number;
-    }
+    };
     detailed: {
         damage: string;
         // To be implemented later:
@@ -23,7 +23,7 @@ interface ICharInfo {
         // ied: number;
         // critRate: number;
         // critDamage: number;
-    }
+    };
 };
 
 export type { ICharInfo };

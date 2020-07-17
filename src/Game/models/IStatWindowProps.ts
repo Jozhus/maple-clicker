@@ -1,7 +1,6 @@
 import { ICharInfo } from "./ICharInfo";
 
-interface IStatWindowProps {
-    charInfo: ICharInfo;
+interface IStatWindowProps extends ICharInfo {
 };
 
 export type { IStatWindowProps };

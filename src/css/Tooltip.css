@@ -1,0 +1,6 @@
+.tooltip {
+    width: 300px;
+    border-radius: 8px;
+    border: solid white !important;
+    border-width: 2px !important;
+}

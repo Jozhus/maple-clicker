@@ -8,19 +8,17 @@ import "../css/StatWindow.css";
 class StatWindow extends Component<IStatWindowProps, {}> {
 
     private formatBasicInfo(): { [field: string]: string | number } {
-        const basicInfo: { [field: string]: string | number } = {
-            name: this.props.charInfo.basicInfo.name,
-            class: this.props.charInfo.basicInfo.class,
-            hp: `${this.props.charInfo.basicInfo.hpCurr} / ${this.props.charInfo.basicInfo.hpMax}`,
-            mp: `${this.props.charInfo.basicInfo.mpCurr} / ${this.props.charInfo.basicInfo.mpMax}`
-        };
-
-        return basicInfo;
+        return ({
+            name: this.props.basicInfo.name,
+            class: this.props.basicInfo.class,
+            hp: `${this.props.currHp} / ${this.props.basicInfo.maxHp}`,
+            mp: `${this.props.currMp} / ${this.props.basicInfo.maxMp}`
+        });
     }
 
     private formatStats(): { [stat: string]: string } {
         const stats: { [stat: string]: string } = {};
-        Object.entries(this.props.charInfo.stats).forEach(([stat, totalStat]: [string, number]) => {
+        Object.entries(this.props.stats).forEach(([stat, totalStat]: [string, number]) => {
             stats[stat] = `${totalStat} (${totalStat}+0)`;
         });
 
@@ -54,7 +52,7 @@ class StatWindow extends Component<IStatWindowProps, {}> {
                 handle=".handle"
             >
                 <div
-                    className="StatWindow"
+                    className="window"
                     style={{ position: "absolute" }}
                 >
                     <div className="handle noselect">

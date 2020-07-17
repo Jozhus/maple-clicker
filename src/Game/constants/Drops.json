@@ -1,0 +1,52 @@
+{
+    "common": [
+        {
+            "name": "meso",
+            "chance": 0.5,
+            "minAmount": 50,
+            "maxAmount": 100
+        },
+        {
+            "name": "red_potion",
+            "chance": 0.3,
+            "minAmount": 1,
+            "maxAmount": 5
+        }
+    ],
+    "low_level_gear": [
+        {
+            "name": "wooden_buckler",
+            "chance": 0.1,
+            "minAmount": 1,
+            "maxAmount": 1
+        },
+        {
+            "name": "blue_cloth_pants",
+            "chance": 0.1,
+            "minAmount": 1,
+            "maxAmount": 1
+        },
+        {
+            "name": "green_ghetto_beanie",
+            "chance": 0.1,
+            "minAmount": 1,
+            "maxAmount": 1
+        }
+    ],
+    "lol": [
+        {
+            "name": "arcane_claw",
+            "chance": 1,
+            "minAmount": 1,
+            "maxAmount": 1
+        }
+    ],
+    "bm": [
+        {
+            "name": "genesis_psy-limiter",
+            "chance": 1,
+            "minAmount": 1,
+            "maxAmount": 1
+        }
+    ]
+}

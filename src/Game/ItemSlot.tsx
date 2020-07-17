@@ -3,8 +3,9 @@ import { IItemSlotProps } from "./models/IItemSlotProps";
 import { IItemSlotsState } from "./models/IItemSlotsState";
 import ReactToolTip from "react-tooltip";
 import { v4 as uuid } from "uuid";
-import "../css/ItemSlot.css";
 import { ItemExaminer } from "./ItemExaminer";
+import "../css/ItemSlot.css";
+import "../css/Tooltip.css";
 
 class ItemSlot extends Component<IItemSlotProps, IItemSlotsState> {
     constructor(props: IItemSlotProps) {
@@ -35,6 +36,7 @@ class ItemSlot extends Component<IItemSlotProps, IItemSlotsState> {
                     }
                 </div>
                 <ReactToolTip
+                    className="tooltip"
                     id={this.state.id}
                 >
                     <ItemExaminer

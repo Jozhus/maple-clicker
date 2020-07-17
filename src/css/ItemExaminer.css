@@ -1,0 +1,45 @@
+.itemStars {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.itemExaminerName {
+    text-align: left;
+    font-weight: bold;
+}
+
+.itemExaminerImageContainer {
+    width: 85px;
+    height: 85px;
+    padding: 3%;
+    background-color: white;
+    border-radius: 8px;
+    border-width: 2px;
+}
+
+.itemExaminerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.star {
+    -webkit-text-stroke: 0.25px black;
+}
+
+.full {
+    color: #ffbb00;
+}
+
+.empty {
+    color: #667777;
+    -webkit-text-stroke: 0.75px black;
+}
+
+.enhanced {
+    color: #66ffff;
+}
+
+hr {
+    border-top: 1px dashed dimgray !important;
+}

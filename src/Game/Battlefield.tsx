@@ -14,7 +14,8 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
         super(props);
 
         this.state = {
-            groundLoot: []
+            groundLoot: [],
+            renderedLoot: []
         };
 
         this.dropLoot = this.dropLoot.bind(this);
@@ -31,19 +32,22 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
         }
 
         let prevGroundLoot: IItemProps[] = this.state.groundLoot;
+        let prevRenderedLoot: JSX.Element[] = this.state.renderedLoot;
 
-        if (prevGroundLoot.every((groundItem: IItemProps) => {
+        if (prevGroundLoot.every((groundItem: IItemProps, index: number) => {
             if (item.stackable && groundItem.itemName === item.itemName) {
                 groundItem.amount += item.amount;
+                prevRenderedLoot[index] = <ItemSlot key={uuid()} item={groundItem} />;
                 return false;
             }
 
             return true;
         })) {
             prevGroundLoot.push(item);
+            prevRenderedLoot.push(<ItemSlot key={uuid()} item={item} />)
         }
 
-        this.setState({ groundLoot: prevGroundLoot });
+        this.setState({ groundLoot: prevGroundLoot, renderedLoot: prevRenderedLoot });
     }
 
     public render(): JSX.Element {
@@ -59,11 +63,7 @@ class Battlefield extends Component<IBattlefieldProps, IBattlefieldState> {
                     <div className="title">
                         {this.props.location}
                     </div>
-                    {
-                        this.state.groundLoot.map((item: IItemProps) => {
-                            return <ItemSlot key={uuid()} item={item} />;
-                        })
-                    }
+                    {this.state.renderedLoot.map((itemSlot: JSX.Element) => itemSlot)}
                 </div>
             </React.Fragment>
         );
