@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/maple-clicker/static/css/main.61446f42.chunk.css",
-    "main.js": "/maple-clicker/static/js/main.d478bff9.chunk.js",
-    "main.js.map": "/maple-clicker/static/js/main.d478bff9.chunk.js.map",
+    "main.css": "/maple-clicker/static/css/main.79b34445.chunk.css",
+    "main.js": "/maple-clicker/static/js/main.19165023.chunk.js",
+    "main.js.map": "/maple-clicker/static/js/main.19165023.chunk.js.map",
     "runtime-main.js": "/maple-clicker/static/js/runtime-main.5d779122.js",
     "runtime-main.js.map": "/maple-clicker/static/js/runtime-main.5d779122.js.map",
     "static/css/2.829c9cb5.chunk.css": "/maple-clicker/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.0a409c36.chunk.js": "/maple-clicker/static/js/2.0a409c36.chunk.js",
-    "static/js/2.0a409c36.chunk.js.map": "/maple-clicker/static/js/2.0a409c36.chunk.js.map",
+    "static/js/2.3fcf2d00.chunk.js": "/maple-clicker/static/js/2.3fcf2d00.chunk.js",
+    "static/js/2.3fcf2d00.chunk.js.map": "/maple-clicker/static/js/2.3fcf2d00.chunk.js.map",
     "index.html": "/maple-clicker/index.html",
-    "precache-manifest.ccb222a4982264fcaac83322f64ad9a1.js": "/maple-clicker/precache-manifest.ccb222a4982264fcaac83322f64ad9a1.js",
+    "precache-manifest.fee8a1aea9618ad807aceb3c82ad56c8.js": "/maple-clicker/precache-manifest.fee8a1aea9618ad807aceb3c82ad56c8.js",
     "service-worker.js": "/maple-clicker/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/maple-clicker/static/css/2.829c9cb5.chunk.css.map",
-    "static/css/main.61446f42.chunk.css.map": "/maple-clicker/static/css/main.61446f42.chunk.css.map",
-    "static/js/2.0a409c36.chunk.js.LICENSE.txt": "/maple-clicker/static/js/2.0a409c36.chunk.js.LICENSE.txt",
+    "static/css/main.79b34445.chunk.css.map": "/maple-clicker/static/css/main.79b34445.chunk.css.map",
+    "static/js/2.3fcf2d00.chunk.js.LICENSE.txt": "/maple-clicker/static/js/2.3fcf2d00.chunk.js.LICENSE.txt",
     "static/media/General.css": "/maple-clicker/static/media/hand.f7e0ca55.ico"
   },
   "entrypoints": [
     "static/js/runtime-main.5d779122.js",
     "static/css/2.829c9cb5.chunk.css",
-    "static/js/2.0a409c36.chunk.js",
-    "static/css/main.61446f42.chunk.css",
-    "static/js/main.d478bff9.chunk.js"
+    "static/js/2.3fcf2d00.chunk.js",
+    "static/css/main.79b34445.chunk.css",
+    "static/js/main.19165023.chunk.js"
   ]
 }
